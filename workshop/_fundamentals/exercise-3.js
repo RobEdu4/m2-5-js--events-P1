@@ -13,9 +13,28 @@ let foodPairings = {
 };
 
 const getPairing = (key) => {
-  // Insert missing solution please
-};
+  if (typeof key !== "string") {
+    return "I didn't get that!";
+  } else {
+    return foodPairings[`${key}`];
+  }
 
+  /*  switch (key) {
+    case "burger":
+      return "beer";
+    case "fish":
+      return "white wine";
+    case "beef":
+      return "ref wine";
+    case "strawberries":
+      return "champagne";
+    default:
+      return "I didn't get that!";
+  }
+  */
+};
+// Insert missing solution please
+console.log(getPairing(`burger`));
 // 2. Do a console.log to verify your function.
 
 // 3. Test your function.

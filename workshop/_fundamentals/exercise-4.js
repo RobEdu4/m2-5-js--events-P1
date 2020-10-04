@@ -6,11 +6,28 @@
 // - If the provided key is not any of the objects, return null for that value;
 
 const getValues = (arr, key) => {
-  // Insert missing solution please
+  let newArray = [];
+  arr.forEach((array) => {
+    newArray.push(array[`${key}`]);
+  });
+
+  if (newArray[0] === undefined) {
+    return null;
+  } else {
+    return newArray;
+  }
 };
-
 // 2. Do a console.log to verify your function.
-
+console.log(
+  getValues(
+    [
+      { name: "chris", age: 23 },
+      { name: "liv", age: 36 },
+      { name: "dave", age: 43 },
+    ],
+    "age"
+  )
+);
 // 3. Test your function.
 // Look for the corresponding exercise file in the __tests__ folder.
 // Add some test cases in the test. The first one is done for you.

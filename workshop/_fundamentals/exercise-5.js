@@ -7,11 +7,30 @@
 // - If the provided argument is not a known month, return 'error';
 
 const getDaysInMonth = (month) => {
-  // Insert missing solution please
+  month = month.toLowerCase();
+  switch (month) {
+    case "january":
+    case "march":
+    case "may":
+    case "july":
+    case "august":
+    case "october":
+    case "december":
+      return 31;
+    case "april":
+    case "june":
+    case "september":
+    case "november":
+      return 30;
+    case "february":
+      return 28;
+    default:
+      return `error`;
+  }
 };
 
 // 2. Do a console.log to verify your function.
-
+console.log(getDaysInMonth("not a month"));
 // 3. Test your function.
 // Look for the corresponding exercise file in the __tests__ folder.
 // Add some test cases in the test. The first one is done for you.
