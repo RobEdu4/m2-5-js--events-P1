@@ -34,24 +34,20 @@
         align-items: center;
         width: 100%;
       }
-
-      #startButton {
-        background-color: yellow;
-        color: darkgray;
-        border: none;
-        height: 3rem;
-        width: 8rem;
-        font-size: 28px;
+      #timer {
+        font-size: 52px;
+        color: white;
       }
       #gameBox {
         background-color: lightgray;
+        position: relative;
         height: 400px;
         width: 600px;
         margin: 60px 0 40px 0;
       }
-      #gameBox .button {
-        height: 80px;
-        width: 80px;
+      button {
+        height: 60px;
+        width: 60px;
         background-color: red;
         border-radius: 100%;
         position: absolute;
@@ -59,6 +55,34 @@
         cursor: pointer;
         font-size: 26px;
         margin: 1px;
+        border: none;
+      }
+
+      #banner > button {
+        background-color: yellow;
+        color: darkgray;
+        border: none;
+        height: 3rem;
+        width: 8rem;
+        font-size: 28px;
+        border: 2px solid darkgray;
+        border-radius: 2px;
+      }
+
+      .green {
+        background-color: green;
+      }
+
+      #notification {
+        display: block;
+        text-align: center;
+        width: 300px;
+        height: 150px;
+        font-size: 36px;
+        border-radius: 10px;
+        top: calc(50% - 100px);
+        left: calc(50% - 150px);
+        position: absolute;
       }
     </style>
   </head>
