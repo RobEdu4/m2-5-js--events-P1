@@ -1,7 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style></style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background: radial-gradient(circle, indigo 0%, orange 35%, red 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      body::before {
+        content: "Be a Quicker Clicker!";
+        color: white;
+        font-size: 32px;
+        position: absolute;
+        top: 25px;
+        left: 45px;
+      }
+      .result {
+        font-size: 50px;
+        color: yellow;
+        font-family: "Secular One", sans-serif;
+      }
+    </style>
   </head>
   <body>
     <p class="result" id="result"></p>

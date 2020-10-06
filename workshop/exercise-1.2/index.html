@@ -1,7 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style></style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+        background: radial-gradient(circle, indigo 0%, orange 33%, red 75%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+      .time-text {
+        color: white;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        font-size: 36px;
+        font-family: "Secular One", sans-serif;
+      }
+
+      #time {
+        color: rgb(176, 198, 247);
+        font-size: 48px;
+      }
+
+      .result {
+        font-size: 50px;
+        color: yellow;
+        font-family: "Secular One", sans-serif;
+      }
+    </style>
   </head>
   <body>
     <p class="time-text">You have <span id="time"></span> seconds to click</p>
