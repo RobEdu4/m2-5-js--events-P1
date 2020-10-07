@@ -29,10 +29,10 @@ let clickedState = [];
 function startGame() {
   startButton.remove();
 
-  for (let i = 1; i <= boxes; i++) {
+  for (let i = 0; i < boxes; i++) {
     const button = document.createElement("button");
-    button.id = `button-${i}`;
-    button.innerText = i;
+    button.id = `button-${i + 1}`;
+    button.innerText = i + 1;
 
     button.style.left = `${Math.random() * 500}px`;
     button.style.top = `${Math.random() * 300}px`;
@@ -54,6 +54,7 @@ function startGame() {
     }
     timer.innerText = seconds / 1000;
     seconds -= 1000;
+    clearInterval(countdown);
   }, 1000);
 
   const buttonStatus = setInterval(function () {
@@ -66,20 +67,19 @@ function startGame() {
 }
 
 function changeColor(event) {
-  console.log("works");
   const buttonId = event.target.id;
   document.getElementById(buttonId).classList.add(`green`);
-
-  const id = buttonId.split("-")[1];
+  console.log(buttonId);
+  let id = buttonId.split("-")[1];
+  id = id - 1;
   clickedState[id] = !clickedState[id];
 }
 
 function checkArray(arr) {
-  let arrayChecker = [];
-  arr.forEach((item) => {
-    arrayChecker.push(item);
+  let arrayChecker = arr.every((item) => {
+    return item;
   });
-
+  console.log(arr);
   console.log(arrayChecker);
   return arrayChecker;
 }
@@ -95,4 +95,7 @@ function endGame() {
     notification.innerText = `You Lose...`;
     notification.style.background = `red`;
   }
+  document.getElementById("notification").style.zIndex = "1";
+  clearTimeout(seconds);
+  clearTimeout(timer);
 }
